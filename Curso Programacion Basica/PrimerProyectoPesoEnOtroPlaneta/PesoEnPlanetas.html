@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Peso en Planeta</title>
+ 	<meta charset="utf-8" />
+</head>
+<body>
+
+<h1>Tu peso en otro planeta</h1>
+
+ <h4>Planeta Seleccionado-> </h4> <div id="planetaOpcion">--</div><br>
+ <h3>Planeta Gravedad->     </h3> <div id="gravedadOpcion">--</div><br>
+ <h2>Planeta Peso->         </h2> <div id="planetaPeso">--</div>
+
+
+ <br>
+	<script type="text/javascript">
+	    alert("Diferentes Planetas Averigua tu Peso");
+	    
+	    var tipoGravedad = prompt("Opciones-> 0 = Martes, 1 = Jupiter, 2 = Luna");  
+	    var peso = prompt("Cual es tu Peso?");  
+	    //Declarar Varaibles 	
+	    var arregloGravedad = [3.4, 24.3, 1.62];
+	    var arregloPlaneta  = ['Martes', 'Jupiter', 'Luna'];
+	    var gra_planeta     = arregloGravedad[tipoGravedad];
+	    var gra_tierra      = 9.8;
+	    var tuPesoEnPlaneta = peso * gra_planeta / gra_tierra;   
+        
+        document.getElementById('planetaOpcion').innerHTML  = arregloPlaneta[tipoGravedad]; 
+        document.getElementById('gravedadOpcion').innerHTML = arregloGravedad[tipoGravedad]; 
+        document.getElementById('planetaPeso').innerHTML    = "<strong>" + parseInt(tuPesoEnPlaneta) + " Kilos</strong>"; 
+
+	</script>
+
+</body>
+</html>
