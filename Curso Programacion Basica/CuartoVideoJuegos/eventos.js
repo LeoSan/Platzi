@@ -97,7 +97,6 @@ function cargarRobot(){
   if (robot.cargaOk == true){
     //recibe un objeto imagen, y coodenada x, y
     papel.drawImage(robot.imagen, 150, 150);
-
   }
 }
 
@@ -207,8 +206,6 @@ function dibujoPorTeclado(evento){
           console.log("lugar de colision x=" + xOrigen + " y = " + yOrigen );
         xOrigen = xOrigen + movimiento;
       }
-
-
     break;
     default:
       console.log("Ninguna");
